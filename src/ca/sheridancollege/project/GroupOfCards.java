@@ -18,11 +18,12 @@ import java.util.Collections;
 public class GroupOfCards {
 
     //The group of cards, stored in an ArrayList
-    private ArrayList<Card> cards;
+    private ArrayList<PlayingCard> cards = new ArrayList<PlayingCard>();
     private int size;//the size of the grouping
 
     public GroupOfCards(int size) {
         this.size = size;
+        
     }
 
     /**
@@ -30,10 +31,13 @@ public class GroupOfCards {
      *
      * @return the group of cards.
      */
-    public ArrayList<Card> getCards() {
+    public ArrayList<PlayingCard> getCards() {
         return cards;
     }
 
+    /**
+    * Shuffle the group of cards in random order
+    */ 
     public void shuffle() {
         Collections.shuffle(cards);
     }
@@ -50,6 +54,33 @@ public class GroupOfCards {
      */
     public void setSize(int size) {
         this.size = size;
+    }
+    
+    /**
+     * Add card to group
+     * @param newCard
+     */
+    public void addCard(PlayingCard newCard){
+        cards.add(newCard);
+    }
+    
+
+    /**
+     * Remove the top card from group and return it
+     */
+    public PlayingCard getTopCard(){
+        PlayingCard top = cards.get(cards.size()-1);
+        cards.remove(cards.size()-1);
+        return top;
+    }
+    
+    /**
+    * Check if the group of cards is empty
+    */ 
+    public boolean isEmpty(){
+        if (cards.isEmpty())
+            return true;
+        else return false;
     }
 
 }//end class
