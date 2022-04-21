@@ -61,6 +61,7 @@ public class GroupOfCards {
      * @param newCard
      */
     public void addCard(PlayingCard newCard){
+        setSize(getSize()+1);
         cards.add(newCard);
     }
     
@@ -70,7 +71,6 @@ public class GroupOfCards {
      */
     public PlayingCard getTopCard(){
         PlayingCard top = cards.get(cards.size()-1);
-        cards.remove(cards.size()-1);
         return top;
     }
     
@@ -81,6 +81,11 @@ public class GroupOfCards {
         if (cards.isEmpty())
             return true;
         else return false;
+    }
+    
+    public void removeCard(int i){
+        cards.remove(i);
+        setSize(getSize()-1);
     }
 
 }//end class
