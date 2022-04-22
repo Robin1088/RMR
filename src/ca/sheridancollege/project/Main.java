@@ -8,7 +8,9 @@ import java.util.Scanner;
 
 /**
  *
- * @author rober
+ * @author Robert Mah
+ * @mod Robin Bedminister
+ * @mod Mel Emery
  */
 public class Main {
     
