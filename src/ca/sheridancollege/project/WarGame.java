@@ -6,7 +6,9 @@ package ca.sheridancollege.project;
 
 /**
  *
- * @author rober
+ * @author Robert Mah
+ * @mod Robin Bedminister
+ * @mod Mel Emery
  * The Game of War
  */
 public class WarGame extends Game{
@@ -19,12 +21,12 @@ public class WarGame extends Game{
     GroupOfCards deck = buildDeck();
     GroupOfCards warPile = new GroupOfCards(0);
     
-/**
- * 
+    /**
+     * 
      * @param name name of the game
      * @param playerName1 player 1's name
      * @param playerName2 player 2's name
- */
+    */
     public WarGame(String name,String playerName1,String playerName2) {
         super(name);
         player1.setName(playerName1);
@@ -43,6 +45,9 @@ public class WarGame extends Game{
         declareWinner();
     }
     
+    /**
+    * Compare the cards and declare the winner of the hand
+    */ 
     public void testCards(PlayingCard p1card,PlayingCard p2card){
         if(p1card.getValue()>p2card.getValue()){
                 System.out.println(player1.getName() + " has won the hand!");

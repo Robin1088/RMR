@@ -14,6 +14,9 @@ import java.util.Collections;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 2020
+ * @mod Robert Mah
+ * @mod Robin Bedminister
+ * @mod Mel Emery
  */
 public class GroupOfCards {
 
@@ -67,7 +70,7 @@ public class GroupOfCards {
     
 
     /**
-     * Remove the top card from group and return it
+     * Return the top card from group
      */
     public PlayingCard getTopCard(){
         PlayingCard top = cards.get(cards.size()-1);
@@ -83,6 +86,9 @@ public class GroupOfCards {
         else return false;
     }
     
+    /**
+    * Remove card from group
+    */ 
     public void removeCard(int i){
         cards.remove(i);
         setSize(getSize()-1);

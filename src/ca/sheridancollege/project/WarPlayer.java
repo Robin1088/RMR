@@ -6,7 +6,9 @@ package ca.sheridancollege.project;
 
 /**
  *
- * @author rober
+ * @author Robert Mah
+ * @mod Robin Bedminister
+ * @mod Mel Emery
  * A player of the game War
  */
 public class WarPlayer extends Player{
@@ -18,6 +20,9 @@ public class WarPlayer extends Player{
         super(name);
     }
     
+    /**
+    * Play the card on the top of the player's hand
+    */ 
     @Override
     public PlayingCard play() {
         PlayingCard card = giveTopCard();
@@ -27,7 +32,7 @@ public class WarPlayer extends Player{
     
     /*
     * Check if the player has cards in their hand
-    *If there is none, check the discard pile
+    * If there is none, check the discard pile
     */
     public boolean hasCards() {
         if (hand.isEmpty() && discard.isEmpty()){
@@ -41,8 +46,8 @@ public class WarPlayer extends Player{
     }
     
     /*
-    *Check if the player has cards in their discard pile
-    *If yes, shuffle theminto their hand and shuffle the cards
+    * Check if the player has cards in their discard pile
+    * If yes, shuffle theminto their hand and shuffle the cards
     */
     public void addDiscard() {
         while(!discard.isEmpty()){
@@ -54,7 +59,7 @@ public class WarPlayer extends Player{
     }
     
     /*
-    *Give the top card of the player's hand
+    * Give the top card of the player's hand
     */
     public PlayingCard giveTopCard(){
         PlayingCard top = hand.getTopCard();
